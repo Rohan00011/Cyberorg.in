@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    *{margin: 0px;
+    
+    
+  
+    }
+
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+  border-radius: 5px;
+  margin-left: 150px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+.input-group
+{
+    position: relative;
+    padding: 20px;
+    margin-left: 40px;
+}
+.input
+{
+    padding: 10px;
+    width: 150%;
+    max-width: 200px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #04AA6D;
+    border-radius: 20px;
+}
+.placeholder
+{
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    color: #666;
+    transition: 0.3s;
+    pointer-events: none;
+    padding: 20px;
+}
+.input:focus + .placeholder
+{
+    top: -10px;
+    color: black;
+    
+}
+
+footer{
+ bottom: 0;
+ background: black;
+ height: 300px;
+ width: 100%;
+ padding: 40px 0 0 0;
+ display: flex;
+}
+/*content*/
+.footer{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ text-align: center;
+}
+.footer p{
+   margin: 10px auto;
+   line-height: 28px;
+   font-size: 14px;
+}
+/*social -media*/
+.socials{
+   list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 1rem 0 3rem 0;
+   margin-bottom: 70px;
+}
+.socials li{
+   margin: 0 10px;
+}
+.socials a{
+   text-decoration: none;
+   color: #fff;
+   border: 1.1px solid white;
+   padding: 5px;
+   border-radius: 50%;
+}
+.socials a i{
+   font-size: 1.1rem;
+   width: 20px;
+   transition: color .4s ease;
+}
+.socials a:hover i{
+   color: dodgerblue;
+}
+/* copyright*/
+
+.footer-copyright p{
+   font-size: 14px;
+   word-spacing: 2px;
+   align-items: center;
+   justify-content: center;
+   background-color: black;
+   color: white;
+   margin-bottom: 60px;
+}
+
+.blink {
+            animation: blinker 1.5s linear infinite;
+            color: white;
+            font-family:sans-serif;
+            
+            
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+ .ba{
+     animation: fadeinanimation ease 5s;
+     animation-iteration-count: 1;
+     animation-fill-mode: forwards;
+   }
+   
+   @keyframes fadeinanimation {
+    0%{
+      opacity: 0;
+    }
+   100%{
+    opacity: 1;
+   }
+
+
+   }
+
+    
+</style>
+<header style="background-color: rgb(14, 14, 255); height:80px; width:100%">
+<div style="display: flex;"> <h2 style="margin-left: 100px; padding: 10px; color: white;"> Booking.com</h2>
+    <h3 style="padding: 10px; margin-left: 800px;color: white;"> INR </h3>
+   <img src="image/indialogo.jpeg" alt="" style="height: 25px; width: 25px; border-radius: 20px;padding: 10px;">
+   <div style="padding: 15px;">
+    <button style="background-color: rgb(14, 14, 255);margin-left: 20px;color: white;border-radius: 20px;"> List Your Property</button>
+   <button style="background-color: white; color: rgb(14, 14, 255);margin-left: 20px;border-radius: 20px;"> Register</button>
+   <button style="background-color: white;color: rgb(14, 14, 255);margin-left: 20px;border-radius: 20px;"> Sign in</button>
+ </div>
+
+</div>
+<div style="margin-left: 200px; display: flex; color: white;">
+  <a href="#" style="color: white;margin-left: 10px;text-decoration: none;"><svg width="10" height="10" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M894 462c30.9 0 43.8-39.7 18.7-58L530.8 126.2a31.81 31.81 0 0 0-37.6 0L111.3 404c-25.1 18.2-12.2 58 18.8 58H192v374h-72c-4.4 0-8 3.6-8 8v52c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-52c0-4.4-3.6-8-8-8h-72V462h62zM381 836H264V462h117v374zm189 0H453V462h117v374zm190 0H642V462h118v374z"/>
+</svg> Stays |</a>
+  <a href="#" style="color: white;margin-left: 10px;text-decoration: none;">&#9992;  flights |</a>
+  <a href="#"style="color: white;margin-left: 10px;text-decoration: none;"> flight+Hotel |</a>
+  <a href="#"style="color: white;margin-left: 10px;text-decoration: none;"> <svg width="10" height="10" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3.5 0A2.5 2.5 0 0 0 1 2.5v9c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2v-9A2.5 2.5 0 0 0 12.5 0h-9ZM3 3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3.9c0 .625-.562 1.092-1.17.994C10.925 7.747 9.208 7.5 8 7.5c-1.208 0-2.925.247-3.83.394A1.008 1.008 0 0 1 3 6.9V3Zm1 9a1 1 0 1 1 0-2a1 1 0 0 1 0 2Zm8 0a1 1 0 1 1 0-2a1 1 0 0 1 0 2Zm-5-2h2a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2Z"/>
+</svg>  Car rentals |</a>
+  <a href="#"style="color: white;margin-left: 10px;text-decoration: none;"> attractions | </a>
+
+<body onload="startTime()"></body>
+<div style="color: white; margin-left: 700px;">
+  <div style="background: black; height: 0px; width: 60px;"><div id="txt"></div></div>
+</div>
+</div>
+</header>
+<!------ header close-->
+<body >
+    
+ <div>
+    <img src="image/taj1.avif" alt="" style="height:500px;width: 100%;">
+   
+  <div style="background-color: white;height: 300px; width: 100%"> 
+    <h2 style="margin-left: 700px;padding: 20px;">New Delhi</h2>
+                                             <hr><br><br>
+  
+ <p style="margin-left: 200px;font-size: 18px;" >  
+    It's rather difficult to slot Delhi - whether Old Delhi or New Delhi - in one particular category. To some it is a "city that never sleeps dotted with glass-mirrored
+    <br> skyscrapers which house stylishly luxurious offices of multinational companies, to others it's a metropolis with tree-lined boulevards while to many more it brings<br>
+
+    back pleasurable memories of bustling streets and bazaars of Chandni Chowk.<br>
+    
+    The capital city of India, Delhi has also been the principal city for many dynasties and empires over the centuries. Home to communities from all over the country,<br>
+    
+    it is indeed a melting pot of cultures.<br>
+    
+    Showcasing delectably different experiences, the city is the perfect example of encapsulation of two very different worlds, the 'old' and the 'new', each
+    <br> representing its own vibrancy and prominence. Take your pick and Delhi, whether old or new or in-between, will never disappoint you.<br>
+    
+    Hotels.
+ </p>
+ <br><br>
+ <div style="padding: 50px; background-color: white; height: 500px; width:px ">
+  <div style="margin-left: 600px;"> <h2>Hotel In New Delhi</h2></div><br><br>
+ 
+  <div style="display: flex; padding: 20px;">
+    <div class="card">
+      <a href="#"><img src="image/card1.avif" alt="Avatar" style="width:100%" >
+     <div class="container">
+       <h4 style="text-decoration: none;">Sheraton New Delhi</h4> 
+       <p>•  Located in the heart of south delhi ,the hotels is a
+           Favorite of the urbane connoisseur & the <br>
+           •  220 rooms offering modern amenities and facilities <br>
+           •  Celebrated dining destination<br>
+           •  Located in the business and commerical<br> 
+             distract of south delhi - saket </p> </a>
+           <br>
+           <button style="background-color: aliceblue; color: black; border-radius: 20px;">EXPLORE </button><button style="background-color: grey; color: white;margin-left: 20px;border-radius: 50px;">BOOK NOW</button>
+     </div>
+     </div>
+  
+   
+           <div class="card">
+           <a href="#"> <img src="image/card2.avif" alt="Avatar" style="width:100%" >
+           <div class="container">
+           <h4><b > ITC Maurya New Delhi  </b></h4> 
+           <p>•  Located in the diplomatic enclave,Itc mayuar <br>
+                 is a tributed to the great mayuar dynasties <br>
+                  offering spectacular ridge views ,award winning <br>
+                 cuisine exquisite accommodation & more.<br>
+                 •  prefferd residence of heads of state & world leader 
+                 •  LEED platinum rated hotel</p> </a>
+                 <br>
+                 <button style="background-color: aliceblue; color: black; border-radius: 20px;">EXPLORE </button><button style="background-color: grey; color: white;margin-left: 20px;border-radius: 50px;">BOOK NOW</button>
+           </div>
+           </div>
+  
+       <div class="card">
+          <a href="#"> <img src="image/card3.avif" alt="Avatar" style="width:100%" >
+         <div class="container">
+          <h4><b > WelcomeHotels by ITC hotels ,
+                    Dwarka , New Delhi 
+          </b></h4> 
+          <p> Located in the diplomatic enclave,Itc mayuar <br>
+            is a tributed to the great mayuar dynasties <br>
+             offering spectacular ridge views ,award winning <br>
+            cuisine exquisite accommodation & more.<br>
+            • In close proximity to the airport <br>
+            • 392 spacious rooms and suities<br>
+            •   specialitity cuisine offerining    </p> </a>
+            <br>
+            <button style="background-color: aliceblue; color: black; border-radius: 20px;">EXPLORE </button><button style="background-color: grey; color: white;margin-left: 20px;border-radius: 50px;">BOOK NOW</button> 
+         </div>
+         </div>
+ </div>
+
+ </div><br><br><br>
+<!------ card close -->
+<div style="background-color: white; height: 500px;  width:100%">
+  <div class="ba">
+ <div style="margin-left: 200px;font-size: 20px;"><b>Top tips for finding New Delhi Hotel deals </b><br>____________________________________</div><br><br>
+
+  <div style="margin-left: 200px;"><p>✅ If you're looking for a cheap hotel in New Delhi you should consider visiting during the low ssation. You'll find<br>
+         cheaper accommodations in New Delhi in June and July<br><br>
+    
+         ✅ Hotel room prices vary depending on many factors but you'll most likely find the best hotel deals in New Delhi it you stay on a Friday. The opposite is true for Wednesday, which is usually the most expensive day.<br>
+         Book more than 90 days before your stay begins to get the best price for your New Delhi accommodation<br><br>
+    
+         ✅ The cheapest 3-star hotel room in New Delhi found on KAYAK in the last 2 weeks was 298, while the mont<br>
+         expensive is 9951<br><br>
+    
+         ✅ Karol Bagh is New Delhi's top upot for shopping with Ajmal Khan Road abuzz with fancy shops and boutique<br>
+         stores, while Gaffar Market has a number of more affordable stalls and stores. To stay close to the shopping<br>
+         action Hotel Swati sits on Ajmal Khan Road while Hotel Suryn International offers an excellently rated budget<br>
+         stay a short distance away.<br><br>
+         ✅  In the southem region, you will find Qutab Minar a tower of historic importance in New Delhi, and in its sumunding area, a number of other towers and monument, Consider the nearby Hosteller Saket Delhi, an excellently rated hotel near the train station. To the north, you will find Villa 33, a traditional-looking building just abort dinstance from the local train into the city<br>
+        Connaught Place is the bustling business hub of New Delhi city centre, filed with entertainment venues restaurants and bans Hotel Palace Heights is set in a Georgian style building typical of the area. The Metropolitan Hotel and Spa New Delhi offers u 5-star experience with relaxation spa suites<br>
+</p>
+
+</div>
+</div>
+</div>
+<div style="background-color: paleturquoise; height: 400px; width: 100%;">
+<div style="margin-left: 200px; padding: 20px;font-size: 20px;"><b>FAQs When booking a hotel in new delhi</b></div>
+<div style="margin-left: 200px;">
+<details>
+  <summary style="padding: 10px;">Are there goods hotels near new delhi airports ?</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details><br><hr>
+<details>
+  <summary style="padding: 10px;">Which neighbourhood are closed to new delhi's most important attraction ? </summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details><br><hr>
+<details>
+  <summary style="padding: 10px;">How do i find a hotel cost  in delhi ?</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details><br><hr>
+<details>
+  <summary style="padding: 10px;">how can i find hotels near me ?</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details><br><hr>
+<details>
+  <summary style="padding: 10px;"> How much does a hotels cost in new delhi </summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details><br><hr>
+</div>
+</div>   
+<div style="background-color: ghostwhite; height: 450px; width: 100%;"> 
+  <div style="display: flex;padding: 30px;">
+ <div style="margin-left: 10px; font-size: 20px; padding: 20px;" >
+ <img src="image/side1.avif" alt="" style="height: 350px; width: 600px;border-radius: 20px;"></div>
+<div style="background-color: #62ECD9 ; height: 350px; width: 600px; margin-left: 200px; border-radius: 50px;">
+  <div style="font-size: 20px; margin-left: 100px;padding: 10px;"><b> Book Hotels & Homestays</b></div>
+  <div style="display: flex;">
+    <form class="form">
+      <div class="input-group">
+      <input type="text" class="input">
+      <label class="placeholder">Name </label>    
+      </div>
+  </form> 
+  <form class="form">
+    <div class="input-group">
+    <input type="text" class="input">
+    <label class="placeholder">Contact NO.</label>    
+    </div>
+</form> 
+</div>
+<b style="font-size: 20px; margin-left: 30px;">TRIP</b>
+<div style="display: flex; margin-left: 10px; padding: 20px;">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">&nbsp;&nbsp;
+  <label for="vehicle1"> INDIA</label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">&nbsp;&nbsp;
+  <label for="vehicle1"> INTERNATIONAL </label>
+</div>
+
+<div style="margin-left: 30px; display: flex;"> 
+  <div> <b>Check In </b></div>&nbsp;
+  <input type="Date">
+  <div style="margin-left: 20px;"><b> Check Out </b></div>&nbsp;
+  <input type="Date"></div>
+  <div style=" padding: 40px;">
+    <label for="cars">DESTINATION :</label>&nbsp;&nbsp;
+
+    <select id="cars">
+      <option value="#">Uttar pradesh</option>
+      <option value="#">Delhi</option>
+      <option value="#">Uttara khand</option>
+      <option value="#">Jammu & kashmir</option>
+      <option value="#">Shimla</option>
+      <option value="#">rajaisthan</option>
+      <option value="#">gujarat</option>
+    </select>
+
+
+  </div>
+
+  <div style="margin-left: 50px; display: flex;">
+     <b>adult </b>&nbsp;&nbsp;
+  <select >
+    <option value="#">0</option>
+    <option value="#">1</option>
+    <option value="#">2</option>
+    <option value="#">3</option>
+    <option value="#">4</option>
+    
+
+  </select>
+  <b style="margin-left: 10px;">Child </b>&nbsp;&nbsp;
+  <select >
+    <option value="#">0</option>
+    <option value="#">1</option>
+    <option value="#">2</option>
+    <option value="#">3</option>
+    <option value="#">4</option>
+
+  </select>
+  <b style="margin-left: 10px;">Room </b>&nbsp;&nbsp;
+  <select >
+    <option value="#">0</option>
+    <option value="#">1</option>
+    <option value="#">2</option>
+    <option value="#">3</option>
+    <option value="#">4</option>
+
+  </select>
+  <button style="margin-left: 50px; background-color: orangered; color: white; height: 20px; width: 60px; border-radius: 20px;">Submit</button>
+ </div>
+ 
+</div>
+</div>
+
+</div>
+</body>
+<footer >
+  <div class="footer" style="margin-left: 150px;">
+   
+    <p>Booking.com</p>
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-github"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+    </ul>
+    <div class="footer-copyright">
+        <p style="margin-left: 50px;">Copyright By @2023 To 2023 </p>
+    </div>
+    <p class="blink" style="margin-left: 30px; margin-bottom: 80px;"> 𝙳𝚎𝚜𝚒𝚐𝚗 𝙰𝚗𝚍 𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚖𝚎𝚗𝚝
+      𝚋𝚢 𝚁𝚘𝚑𝚊𝚗 𝚁𝚊𝚠𝚊t</p>
+</div>
+<div> <img src="image/tm.png" alt="" style="height: 300px; width: 450px; margin-left: 380px;"></div>
+</footer>
+
+<script>
+  function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+  }
+  
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
+  </script>
+
+</html>
